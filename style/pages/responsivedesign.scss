@@ -1,0 +1,344 @@
+/* Media Queries for Responsiveness */ 
+@media screen and (max-width: 1820px) { 
+    body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    } 
+} 
+/* Media Queries pour la réactivité à 950px */
+@media screen and (max-width: 950px) {
+    .menu {
+        display: none; /* Masquer le menu par défaut */
+    }
+    .menu.active {
+        display: block; /* Afficher le menu lorsqu'il est actif */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        background-color: #f0f0f0; /* Gris clair pour le fond du menu */
+        position: absolute; /* Positionner le menu en dessous du header */
+        top: 60px; /* Ajuster en fonction de la hauteur de votre header */
+        right: 0; /* Aligner à droite */
+        width: 35%; /* Prendre environ un peu plus de 1/4 de la largeur */
+        height: 100vh; /* Assurer que le menu prenne toute la hauteur de l'écran */
+        padding: 15px; /* Ajouter plus de padding */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter un peu de style */
+    }
+    .menu ul {
+        padding: 0; /* Supprimer les marges internes par défaut */
+        margin: 0; /* Supprimer les marges externes par défaut */
+        list-style: none; /* Supprimer les puces de liste */
+    }
+    .menu ul li {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        padding: 15px 0; /* Ajouter plus de padding vertical */
+        text-align: center; /* Centrer le texte */
+        margin-bottom: 10px; /* Ajouter un espacement entre les items du menu */
+    }
+    .menu ul li a {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        text-decoration: none; /* Supprimer la décoration de lien */
+        display: block; /* Faire en sorte que le lien prenne toute la largeur */
+        width: 100%; /* S'assurer que le lien prend toute la largeur */
+        border-bottom: none; /* Pas de bordure par défaut */
+    }
+    .menu ul li a:hover {
+        border-bottom: 2px solid orange; /* Border-bottom orange sur hover */
+    }
+    .menu ul li select, .menu ul li option {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        color: #4a4a4a !important; /* Texte en gris clair pour correspondre à `.description` */
+        width: 100%; /* Assurez-vous que le `select` prend toute la largeur */
+        padding: 5px; /* Ajoutez un peu de padding pour une meilleure visibilité */
+    }
+    .menu ul li input[type="search"] {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        border-bottom: 2px solid #4a4a4a; /* Border-bottom gris clair pour correspondre à `.description` */
+        padding: 5px;
+        width: 80%; /* Ajustez selon vos besoins */
+        font-size: 14px;
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        margin: 0 auto 30px; /* Centrer la barre de recherche et ajouter de l'espace en bas */
+        display: block;
+    }
+    .burger {
+        display: block; /* Assurer que le burger soit visible */
+        margin-top: 20px; /* Ajuster la marge du burger */
+        cursor: pointer; 
+        z-index: 10;
+    }
+    .burger .first_btn, .burger .second_btn, .burger .third_btn {
+        width: 30px; 
+        height: 4px; 
+        background-color: black; 
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger.active .first_btn {
+        transform: rotate(45deg) translate(5px, 5px); 
+    }
+    .burger.active .second_btn {
+        opacity: 0; 
+    }
+    .burger.active .third_btn {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .imagelogo {
+        width: 70px; /* Ajuster la taille du logo */
+        height: auto;
+        margin-top: 40px; /* Descendre l'image du logo */
+    }
+    .logotitle h2 {
+        margin-top: 40px; /* Descendre le titre */
+    }
+
+    /* Styles spécifiques pour le placement de "Contact" en dessous de "A propos" */
+    .menu ul li {
+        order: initial; /* Réinitialiser l'ordre de tous les éléments */
+    }
+    .menu ul li:nth-child(2) {
+        order: 3; /* Assurer que "A propos" est en deuxième position */
+    }
+    .menu ul li:nth-child(3) {
+        order: 4; /* Assurer que "Contact" est en troisième position */
+    }
+    .menu ul li:nth-child(4) {
+        order: 1; /* Placer le premier élément en dernière position */
+    }
+}
+/* Media Queries pour la réactivité à 768px */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Masquer le menu par défaut */
+    }
+    .menu.active {
+        display: block; /* Afficher le menu lorsqu'il est actif */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        background-color: #f0f0f0; /* Gris clair pour le fond du menu */
+        position: absolute; /* Positionner le menu en dessous du header */
+        top: 60px; /* Ajuster en fonction de la hauteur de votre header */
+        right: 0; /* Aligner à droite */
+        width: 35%; /* Prendre environ un peu plus de 1/4 de la largeur */
+        height: 100vh; /* Assurer que le menu prenne toute la hauteur de l'écran */
+        padding: 15px; /* Ajouter plus de padding */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter un peu de style */
+    }
+    .menu ul {
+        padding: 0; /* Supprimer les marges internes par défaut */
+        margin: 0; /* Supprimer les marges externes par défaut */
+        list-style: none; /* Supprimer les puces de liste */
+    }
+    .menu ul li {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        padding: 15px 0; /* Ajouter plus de padding vertical */
+        text-align: center; /* Centrer le texte */
+        margin-bottom: 10px; /* Ajouter un espacement entre les items du menu */
+    }
+    .menu ul li a {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        text-decoration: none; /* Supprimer la décoration de lien */
+        display: block; /* Faire en sorte que le lien prenne toute la largeur */
+        width: 100%; /* S'assurer que le lien prend toute la largeur */
+        border-bottom: none; /* Pas de bordure par défaut */
+    }
+    .menu ul li a:hover {
+        border-bottom: 2px solid orange; /* Border-bottom orange sur hover */
+    }
+    .menu ul li select, .menu ul li option {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        color: #4a4a4a !important; /* Texte en gris clair pour correspondre à `.description` */
+        width: 100%; /* Assurez-vous que le `select` prend toute la largeur */
+        padding: 5px; /* Ajoutez un peu de padding pour une meilleure visibilité */
+    }
+    .menu ul li input[type="search"] {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        border-bottom: 2px solid #4a4a4a; /* Border-bottom gris clair pour correspondre à `.description` */
+        padding: 5px;
+        width: 80%; /* Ajustez selon vos besoins */
+        font-size: 14px;
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        margin: 0 auto 30px; /* Centrer la barre de recherche et ajouter de l'espace en bas */
+        display: block;
+    }
+    .burger {
+        display: block; /* Assurer que le burger soit visible */
+        margin-top: 20px; /* Ajuster la marge du burger */
+        cursor: pointer; 
+        z-index: 10;
+    }
+    .burger .first_btn, .burger .second_btn, .burger .third_btn {
+        width: 30px; 
+        height: 4px; 
+        background-color: black; 
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger.active .first_btn {
+        transform: rotate(45deg) translate(5px, 5px); 
+    }
+    .burger.active .second_btn {
+        opacity: 0; 
+    }
+    .burger.active .third_btn {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .imagelogo {
+        width: 70px; /* Ajuster la taille du logo */
+        height: auto;
+        margin-top: 40px; /* Descendre l'image du logo */
+    }
+    .logotitle h2 {
+        margin-top: 40px; /* Descendre le titre */
+    }
+
+    /* Styles spécifiques pour le placement de "Contact" en dessous de "A propos" */
+    .menu ul li {
+        order: initial; /* Réinitialiser l'ordre de tous les éléments */
+    }
+    .menu ul li:nth-child(2) {
+        order: 3; /* Assurer que "A propos" est en deuxième position */
+    }
+    .menu ul li:nth-child(3) {
+        order: 4; /* Assurer que "Contact" est en troisième position */
+    }
+    .menu ul li:nth-child(4) {
+        order: 1; /* Placer le premier élément en dernière position */
+    }
+}
+
+
+/* Media Queries pour la réactivité à 576px */
+@media screen and (max-width: 576px) {
+    body {
+        font-size: initial; /* Rétablir la taille de la police pour tout le contenu */
+    }
+    .menu {
+        display: none; /* Masquer le menu par défaut */
+    }
+    .menu.active {
+        display: block; /* Afficher le menu lorsqu'il est actif */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        background-color: #f0f0f0; /* Gris clair pour le fond du menu */
+        position: fixed; /* Positionner le menu en dessous du header */
+        top: 60px; /* Ajuster en fonction de la hauteur de votre header */
+        right: 0; /* Aligner à droite */
+        width: 35%; /* Prendre environ un peu plus de 1/4 de la largeur */
+        height: auto; /* Assurer que le menu prenne la hauteur nécessaire */
+        padding: 15px; /* Ajouter plus de padding */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter un peu de style */
+        z-index: 9999; /* Assurer que le menu soit au-dessus des autres éléments */
+    }
+    .menu ul {
+        padding: 0; /* Supprimer les marges internes par défaut */
+        margin: 0; /* Supprimer les marges externes par défaut */
+        list-style: none; /* Supprimer les puces de liste */
+    }
+    .menu ul li {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        padding: 15px 0; /* Ajouter plus de padding vertical */
+        text-align: center; /* Centrer le texte */
+        margin-bottom: 10px; /* Ajouter un espacement entre les items du menu */
+        font-size: 14px; /* Ajuster la taille de la police pour le menu */
+    }
+    .menu ul li a {
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        text-decoration: none; /* Supprimer la décoration de lien */
+        display: block; /* Faire en sorte que le lien prenne toute la largeur */
+        width: 100%; /* S'assurer que le lien prend toute la largeur */
+        border-bottom: none; /* Pas de bordure par défaut */
+        font-size: 14px; /* Ajuster la taille de la police pour le menu */
+    }
+    .menu ul li a:hover {
+        border-bottom: 2px solid orange; /* Border-bottom orange sur hover */
+    }
+    .menu ul li select, .menu ul li option {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        color: #4a4a4a !important; /* Texte en gris clair pour correspondre à `.description` */
+        width: 100%; /* Assurez-vous que le `select` prend toute la largeur */
+        padding: 5px; /* Ajoutez un peu de padding pour une meilleure visibilité */
+        font-size: 14px; /* Ajuster la taille de la police pour le menu */
+    }
+    .menu ul li input[type="search"] {
+        background-color: transparent; /* Pas de fond blanc */
+        border: none; /* Pas de bordure */
+        border-bottom: 2px solid #4a4a4a; /* Border-bottom gris clair pour correspondre à `.description` */
+        padding: 5px;
+        width: 80%; /* Ajustez selon vos besoins */
+        font-size: 14px; /* Ajuster la taille de la police pour le menu */
+        color: #4a4a4a; /* Texte en gris clair pour correspondre à `.description` */
+        margin: 0 auto 30px; /* Centrer la barre de recherche et ajouter de l'espace en bas */
+        display: block;
+    }
+    .burger {
+        display: block; /* Assurer que le burger soit visible */
+        margin-top: 55px; /* Descendre la position du burger */
+        cursor: pointer; 
+        z-index: 10001; /* Assurer que le bouton X soit au-dessus */
+        position: fixed; /* Garder fixe le menu burger */
+        top: 60px; /* Ajuster pour aligner avec le logo */
+        right: 10px;
+    }
+    .burger .first_btn, .burger .second_btn, .burger .third_btn {
+        width: 30px; 
+        height: 4px; 
+        background-color: black; 
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger.active .first_btn {
+        transform: rotate(45deg) translate(5px, 5px); 
+    }
+    .burger.active .second_btn {
+        opacity: 0; /* Assurer que la deuxième barre soit cachée pour former le X */
+    }
+    .burger.active .third_btn {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .imagelogo {
+        width: 50px !important; /* Réduire la taille du logo */
+        height: auto;
+        margin-top: 50px; /* Descendre l'image du logo */
+        position: fixed; /* Garder fixe l'image du logo */
+        left: 10px; /* Ajuster pour aligner avec les barres */
+    }
+    .logotitle {
+       display: none !important;
+
+    }
+    .description{
+        display: flex;
+        font-size: 10px;
+    }
+    .moreleft{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .info {
+        text-align: center;
+        display: flex;
+            }
+    .info i{
+        font-size: 9px !important; /* Réduire la taille du texte */
+        padding: 5px !important;
+
+            }
+
+    /* Styles spécifiques pour le placement de "Contact" en dessous de "A propos" */
+    .menu ul li {
+        order: initial; /* Réinitialiser l'ordre de tous les éléments */
+    }
+    .menu ul li a[href*="about"] {
+        order: 1; /* Placer "A propos" en première position */
+    }
+    .menu ul li a[href*="contact"] {
+        order: 2; /* Placer "Contact" en deuxième position */
+    }
+    .navbar{
+        background-color: whitesmoke;
+    }
+    
+    }

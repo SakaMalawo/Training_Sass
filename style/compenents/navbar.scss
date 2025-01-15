@@ -1,0 +1,115 @@
+
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imagelogo{
+    height: 100px;
+    width: 90px;
+    float: left;
+    margin-top: 5px;
+}
+
+.logotitle{
+    margin: 5px;
+    margin-top: 5px !important;
+}
+
+    .specialgrey{
+        font-size: 20px;
+        color: grey;
+        font-family: verdana;
+        font-weight: 600;
+    }
+    
+    .specialblack{
+        font-size: 30px;
+        color: black;
+        font-family: verdana;
+        border-top: 3px solid orange;
+    }
+    
+    .specialblue{
+        font-size: 20px;
+        color: blue;
+        font-family: verdana;
+        font-weight: 600;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    .burger.active + .menu { 
+        display: block; 
+        background-color: red; 
+        padding: 10px; 
+        float: right; 
+    }
+.menu ul li {
+    list-style-type: none;
+    text-align: center;
+    display: inline !important;
+    font-size: 14px;
+    margin-right: 25px;
+    float: left;
+
+    
+    a{
+        text-decoration: none !important;
+        display: inline;
+        padding: 5px;
+        margin-right: 25px;
+        color: grey;
+        font-size: 20px;
+        border-bottom: 3px solid orange;
+       
+        select{
+            border: none;
+            color: grey;
+
+            option{
+                border: none;
+            color: grey;
+            }
+        }
+        select:hover{
+            background-color: rgb(236, 233, 233);
+        }
+        option:hover{
+            background-color: rgb(236, 233, 233);
+        }
+
+        
+    }
+    form{
+        margin-top: 3px;
+        input{
+            background-color: #f8f0f077;
+            padding: 5px;
+            text-align: center;
+            border-radius: 12px;
+            width: 300px;
+        
+        }
+    }
+
+    a:hover{
+        cursor: pointer;
+        border-bottom: 2px solid rgb(5, 5, 146);
+        background-color: rgb(236, 233, 233);
+    }    
+}
+.burger{ 
+    display: block; 
+    margin: 15px; 
+    cursor: pointer; 
+    z-index: 10; 
+    /* Make sure burger is above other elements */ 
+} 
+
+
+                            

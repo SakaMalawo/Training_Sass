@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.css" type="text/css">
+</head>
+<body class="mixins-basic body pages-responsivedesign">
+
+    <header class="pages-responsivedesign mixins-basic fixedheader">
+        <div class="mixins-basic head">
+            <div class="row mixins-basic nomargin">
+                <div class="col-lg-6 mixins-basic moreleft">
+                    <div class="mixins-basic info">
+                        <div>
+                            <i class="fas fa-map"> 23 Rue du Charles de gaules, 75000, Paris.
+                            </i>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"> 0456789012</i>
+                        </div>
+                        <div>
+                            <i class="fas fa-watch"> Lundi - vendredi 10H00 - 16H00</i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 mixins-basic bluepart">
+                    <p class="mixins-basic description"> Solution bancaire pour les professionnels et les particuliers</p>
+
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <nav class="compenents-navbar navbar">
+            <div class="mixins-basic menuOne">
+                <div class="compenents-navbar logo">
+                    <div>
+                        <img src="photo/logo.png" alt="" class="imagelogo">
+                    </div>
+                    <div class="compenents-navbar logotitle">
+                        <h2>
+                            <span class="specialgrey">MON</span><span class="specialblack">DOSSIER</span><span class="specialblue">BANQUE</span></h2>
+                    </div>    
+                </div>
+            </div>
+            <br>
+            <div id="menu" class="compenents-navbar menu">
+                <ul>
+                    <li>
+                        <form action="search" method="get">
+                            <input type="search" name="search" id="search" placeholder="Search">
+                        </form>
+                    </li>
+                    <li><a href="#">Acceuil</a></li>
+                    <li>
+                        <a href="#">
+                            <select name="services" id="services">
+                                <option value="default">Services</option>
+                                <option value="primary"> Professionnels</option>
+                                <option value="secondary">Particuliers</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="burger mixins-basic">
+                <div class="first_btn"> </div>
+                <div class="second_btn"></div>
+                <div class="third_btn"></div>
+            </div>
+        </nav>
+    </header>
+        <br><br>
+    <section class="mixins-basic sectionOne">
+        <div class="row mixins-basic" id="morepaddinginrow">
+            <div class="col-lg-12">
+                <br>
+                <h3 class="variables-coloredtitle solution"> Votre Expert en solution bancaire</h3>
+                <br><br>
+                <p class="variables-coloredtext parag"><span class="specialbgc">Mondossierbanque.com </span> est votre expert priviliégé pour vos <br>
+                    recherches de financement de crédit et pour toutes vos solutions <br>
+                    bancaires.
+                </p>
+                <br>
+                <a href="#" class="bluelink mixins-basic"> en savoir plus  -> </a>
+            </div>
+        </div>
+    </section>
+    <section class="mixins-basic sectionTwo">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="variables-coloredtitle solutionOne"> A propos</h3>
+                <p class="variables-coloredtext aboutpart">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    Perspiciatis, odio autem fuga vero tenetur ratione corrupti nemo <br>
+                    veniam sequi doloremque id asperiores <br>
+                    voluptas itaque praesentium eaque aut ipsa, eos ipsam!</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="photo/progress.png" alt="" class="mixins-basic progressbar">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('#menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
