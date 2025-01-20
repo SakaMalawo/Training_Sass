@@ -211,12 +211,19 @@
 
 
 /* Media Queries pour la réactivité à 576px */
+
+
 @media screen and (max-width: 576px) {
     body {
         font-size: initial; /* Rétablir la taille de la police pour tout le contenu */
     }
     .menu {
         display: none; /* Masquer le menu par défaut */
+    }
+    .navbar{
+        border-bottom: 3px solid rgba(211, 204, 204, 0.353);
+        line-height: 0.1;
+        height: 60px;
     }
     .menu.active {
         display: block; /* Afficher le menu lorsqu'il est actif */
@@ -275,7 +282,7 @@
     }
     .burger {
         display: block; /* Assurer que le burger soit visible */
-        margin-top: 55px; /* Descendre la position du burger */
+        margin-top: -2px; /* Descendre la position du burger */
         cursor: pointer; 
         z-index: 10001; /* Assurer que le bouton X soit au-dessus */
         position: fixed; /* Garder fixe le menu burger */
@@ -299,33 +306,40 @@
         transform: rotate(-45deg) translate(5px, -5px);
     }
     .imagelogo {
-        width: 50px !important; /* Réduire la taille du logo */
-        height: auto;
-        margin-top: 50px; /* Descendre l'image du logo */
-        position: fixed; /* Garder fixe l'image du logo */
-        left: 10px; /* Ajuster pour aligner avec les barres */
+        display: none;
     }
     .logotitle {
-       display: none !important;
+       display: block;
+       text-align: center;
+       margin: 15px;
+       margin-top: -20px !important;
+       
+       .specialgrey{
+        font-size: 12px;
+       }
+       .specialblack{
+        font-size: 15px;
+       }
+       .specialblue{
+        font-size: 12px;
+       }
 
     }
     .description{
-        display: flex;
-        font-size: 10px;
+        display: none;
     }
-    .moreleft{
+    .info{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
-    .info {
-        text-align: center;
-        display: flex;
-            }
     .info i{
         font-size: 9px !important; /* Réduire la taille du texte */
-        padding: 5px !important;
+        text-align: center;
+        line-height: 0.1 !important;
+        color: rgb(239, 233, 233);
 
-            }
+ }
 
     /* Styles spécifiques pour le placement de "Contact" en dessous de "A propos" */
     .menu ul li {
@@ -337,8 +351,36 @@
     .menu ul li a[href*="contact"] {
         order: 2; /* Placer "Contact" en deuxième position */
     }
-    .navbar{
-        background-color: whitesmoke;
+
+    .sectionOne{
+        padding: 5px;
+        margin: 15px;
+        height: 250px !important;
+    
+        .solution{
+            font-size: 24px;
+            margin-top: -35px;
+            margin-left: 0 !important;
+        }
+        .parag{
+            font-size: 12px;
+            margin: 0 !important;
+            margin-top: -20px !important;
+            .specialbgc{
+                font-size: 13px;
+            }
+        }
+        .bluelink{
+            font-size: 10px !important;
+            padding: 5px;
+            margin: 5px;
+            margin-top: -10px;
+            float: right;
+        }
+    }
+    #morepaddinginrow{
+        margin: 15px;
+        padding:15px;
     }
     
     }
