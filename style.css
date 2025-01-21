@@ -195,6 +195,150 @@
   margin-top: 25px;
 }
 
+.morebottom {
+  margin-top: 65px !important;
+  margin: 10px;
+  padding: 10px;
+}
+
+.greygradient_background {
+  background-color: rgba(215, 212, 205, 0.295);
+}
+
+.border_topOrange {
+  border-top: 8px solid orange;
+  background-color: whitesmoke;
+  width: 100%;
+  margin: 0;
+}
+
+.contact_features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact_featuresOne {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.name {
+  margin-left: 15px !important;
+}
+
+.email {
+  margin-left: 16px !important;
+}
+
+label {
+  font-size: 14px;
+  color: grey;
+  font-weight: 600;
+  margin: 5px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+}
+
+.features {
+  padding: 15px;
+  margin: 15px;
+}
+
+textarea {
+  width: 400px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+button {
+  position: absolute;
+  bottom: -80px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+#icones {
+  color: orange;
+  font-size: 100px;
+  margin-left: 20px;
+}
+
+.headphones {
+  text-decoration: none !important;
+  color: orange;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.watch {
+  text-decoration: none !important;
+  color: orange;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.RDV {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px;
+  margin: 15px;
+}
+.RDV a {
+  margin-left: -24px;
+}
+
+.photoB {
+  margin-top: 15px;
+  width: 500px;
+  height: 400px;
+}
+
+.footer {
+  margin-top: 45px;
+  border-top: 8px solid rgb(0, 204, 255);
+  background-color: rgba(3, 3, 49, 0.866);
+  margin: 15px;
+  padding: 15px;
+}
+
+.social_media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.social_media #facebook {
+  color: white;
+}
+.social_media #instagram {
+  color: white;
+}
+.social_media #linkedin {
+  color: white;
+}
+
+.ord li {
+  list-style-type: none;
+  text-align: center;
+  color: white;
+}
+
+.media {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1820px) {
   body {
@@ -598,12 +742,41 @@
   font-size: 20px;
 }
 
+.contact_us {
+  color: rgb(2, 2, 176);
+  font-size: 50px;
+  margin-top: 25px;
+  margin-left: 35px;
+  text-align: center;
+}
+
+.prise_RDV {
+  color: rgb(2, 2, 176);
+  font-size: 50px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.footertitle {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
 .aboutpart {
   font-size: 20px;
   color: grey;
   margin: 25px;
   margin-left: 15px;
   padding: 15px;
+}
+
+.contact_us_paragraph {
+  color: grey;
+  text-align: center;
+  font-size: 13px;
+  padding: 15px;
+  margin: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
