@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Site Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.css" type="text/css">
+
+    <style>
+        /* Styles de base */
+
+
+main {
+    padding: 2em;
+}
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+p, label {
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Section de recherche */
+#search input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+#search button {
+    padding: 0.5em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+}
+
+#search button:hover {
+    background-color: #388E3C;
+}
+
+/* Produits */
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+/* Formulaire d'ajout de produit */
+#addProduct .form-group {
+    margin-bottom: 1em;
+}
+
+#addProduct label {
+    display: block;
+}
+
+#addProduct input,
+#addProduct textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#addProduct input:focus,
+#addProduct textarea:focus {
+    border-color: #4CAF50;
+}
+
+#addProduct button {
+    padding: 0.5em 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+}
+
+#addProduct button:hover {
+    background-color: #388E3C;
+}
+
+    </style>
+</head>
+<body class="mixins-basic body pages-responsivedesign">
+    <header class="pages-responsivedesign mixins-basic fixedheader">
+        <div class="mixins-basic head">
+            <div class="row mixins-basic nomargin">
+                <div class="col-lg-6 mixins-basic moreleft">
+                    <div class="mixins-basic info">
+                        <div>
+                            <i class="fas fa-map"> 23 Rue du Charles de gaules, 75000, Paris.
+                            </i>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"> 0456789012</i>
+                        </div>
+                        <div>
+                            <i class="fas fa-watch"> Lundi - vendredi 10H00 - 16H00</i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 mixins-basic bluepart">
+                    <p class="mixins-basic description"> Solution bancaire pour les professionnels et les particuliers</p>
+
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <nav class="compenents-navbar navbar">
+            <div class="mixins-basic menuOne">
+                <div class="compenents-navbar logo">
+                    <div>
+                        <img src="photo/logo.png" alt="" class="imagelogo">
+                    </div>
+                    <div class="compenents-navbar logotitle">
+                        <h2>
+                            <span class="specialgrey">RISE UP</span><span class="specialblack">MY</span><span class="specialblue">MADAGASCAR</span></h2>
+                    </div>    
+                </div>
+            </div>
+            <br>
+            <div id="menu" class="compenents-navbar menu">
+                <ul>
+                    <li>
+                        <form action="search" method="get">
+                            <input type="search" name="search" id="search" placeholder="Search">
+                        </form>
+                    </li>
+                    <li><a href="#">Acceuil</a></li>
+                    <li>
+                        <a href="service.html">
+                            <select name="services" id="services">
+                                <option value="default"> <a href="service.html"> Services </a></option>
+                                <option value="primary"> Professionnels</option>
+                                <option value="secondary">Particuliers</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li><a href="propos.html">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="espace_agro.html">Espace Agro</a></li>
+                </ul>
+            </div>
+            <div class="burger mixins-basic">
+                <div class="first_btn"> </div>
+                <div class="second_btn"></div>
+                <div class="third_btn"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <div> 
+    </div>
+    <!-- Main Page Content -->
+    <main id="mainContent">
+        <!-- Your existing content goes here -->
+    </main>
+
+    <!-- Agro Space Content (initially hidden) -->
+    <main id="agroSpace" style="display: none;">
+        <section id="products">
+            <h2>Nos Produits</h2>
+            <div id="productList"></div>
+        </section>
+
+        <section id="addProduct">
+            <h2>Ajouter un Produit</h2>
+            <form id="productForm">
+                <label for="productName">Nom du Produit:</label>
+                <input type="text" id="productName" required>
+
+                <label for="productDescription">Description:</label>
+                <textarea id="productDescription" required></textarea>
+
+                <label for="productPrice">Prix:</label>
+                <input type="number" id="productPrice" required>
+
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Fonction pour afficher l'Espace Agro lorsque le lien est cliqué
+function openAgroSpace() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('agroSpace').style.display = 'block';
+}
+
+// Soumission du formulaire d'ajout de produit
+document.getElementById('productForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const productName = document.getElementById('productName').value;
+    const productDescription = document.getElementById('productDescription').value;
+    const productPrice = document.getElementById('productPrice').value;
+
+    const productList = document.getElementById('productList');
+
+    // Créer un nouvel élément produit
+    const productItem = document.createElement('div');
+    productItem.className = 'product';
+
+    const productDetails = `
+        <h3>${productName}</h3>
+        <p>${productDescription}</p>
+        <p><strong>Prix :</strong> ${productPrice} Ariary</p>
+    `;
+
+    productItem.innerHTML = productDetails;
+    productList.appendChild(productItem);
+
+    // Effacer le formulaire
+    document.getElementById('productForm').reset();
+});
+
+// Fonction de recherche de produits
+function searchProduct() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(function(product) {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+        if (productName.includes(searchInput)) {
+            product.style.display = '';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
