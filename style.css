@@ -109,7 +109,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
   background-color: rgba(240, 235, 235, 0.123);
 }
 
@@ -309,8 +308,7 @@ button {
   margin-top: 45px;
   border-top: 8px solid rgb(0, 204, 255);
   background-color: rgba(3, 3, 49, 0.866);
-  margin: 15px;
-  padding: 15px;
+  width: 100%;
 }
 
 .social_media {
@@ -321,11 +319,26 @@ button {
 .social_media #facebook {
   color: white;
 }
+.social_media #facebook:hover {
+  cursor: pointer;
+  color: rgb(0, 195, 255);
+  padding-top: 5px;
+}
 .social_media #instagram {
   color: white;
 }
+.social_media #instagram:hover {
+  cursor: pointer;
+  color: rgb(208, 0, 255);
+  padding-top: 5px;
+}
 .social_media #linkedin {
   color: white;
+}
+.social_media #linkedin:hover {
+  cursor: pointer;
+  color: rgb(81, 0, 255);
+  padding-top: 5px;
 }
 
 .ord li {
@@ -337,6 +350,36 @@ button {
 .media {
   font-size: 24px;
   margin-top: 15px;
+}
+
+.part {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  border-top-left-radius: 15px;
+}
+.part img {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.col_right, .col_left {
+  border: 1px solid grey;
+}
+
+.hr {
+  width: 560px;
+  border: 3px solid blue;
+  float: right;
+}
+
+.partrow {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Media Queries for Responsiveness */
