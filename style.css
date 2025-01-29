@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.body {
+  background-color: rgb(141, 139, 139);
+}
+
 .logo {
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +120,7 @@
   position: fixed !important;
   background-color: white;
   width: 100%;
+  z-index: 999; /* Navbar en haut */
 }
 
 .head {
@@ -123,6 +128,7 @@
   left: 0;
   right: 0;
   background-color: rgb(5, 5, 146);
+  z-index: 998; /* Entête juste en dessous de la navbar */
 }
 
 .info {
@@ -130,6 +136,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  z-index: 998; /* À même hauteur que l'entête */
 }
 
 .info i {
@@ -142,6 +149,7 @@
 .bluepart {
   background-color: rgb(5, 36, 80);
   width: 100%;
+  z-index: 997; /* Juste en dessous de l'entête et de l'information */
 }
 
 .description {
@@ -152,6 +160,7 @@
   font-size: 14px;
   font-weight: 600;
   padding: 5px;
+  z-index: 997;
 }
 
 .sectionOne {
@@ -378,6 +387,12 @@ button {
   justify-content: space-around;
 }
 
+.carousel {
+  margin-top: 100px;
+  background-image: url("photo/a.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+} /* Ajustez la valeur en fonction de la hauteur de la navbar et de l'entête */
 /* Core Styling for the Carousel */
 .carousel-inner {
   position: relative;
@@ -395,12 +410,15 @@ button {
 
 .carousel-item.active {
   display: block;
+  background-image: url(photo/b.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .carousel-item img {
   width: 100%;
   height: auto;
-  max-height: 500px; /* Ajustez cette valeur selon vos besoins */
+  max-height: 400px; /* Ajustez cette valeur selon vos besoins */
   object-fit: cover; /* Pour s'assurer que les images remplissent l'espace de manière uniforme */
 }
 
@@ -410,7 +428,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
+  color: green;
   cursor: pointer;
   font-size: 2em;
   z-index: 1;
@@ -456,6 +474,7 @@ button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: rgba(120, 114, 114, 0.123) !important;
   }
 }
 /* Media Queries pour la réactivité à 950px */
