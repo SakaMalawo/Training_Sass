@@ -13,7 +13,7 @@
   height: 100px;
   width: 90px;
   float: left;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .logotitle {
@@ -538,13 +538,12 @@ button {
 }
 
 .encercled {
-  border: 2px solid green;
   box-shadow: 0px 5px 0px 5px rgba(5, 233, 5, 0.482);
   display: flex;
   justify-content: center;
   padding-inline: 10px;
   border-radius: 15px;
-  background-color: whitesmoke;
+  background-color: rgba(219, 212, 212, 0.466);
   padding: 15px;
 }
 .encercled .pdes {
@@ -1116,6 +1115,64 @@ button {
   font-size: 24px;
   color: grey;
   text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Services {
+  padding: 30px 0;
+  margin-top: 4rem;
+}
+
+.Services-list, .work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.Services-list .ooun, .work-list .ooun {
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 30px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.Services-list i, .work-list i {
+  margin-top: 0;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.Services-list h2, .work-list h2, .work-list h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.Services-list .x, .work-list .x {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.ooun:hover {
+  background: #080808;
+  transform: translateY(-10px);
+}
+
+.photo1 {
+  background: url(../../photo/2.jpeg);
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
